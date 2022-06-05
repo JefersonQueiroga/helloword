@@ -31,12 +31,16 @@ public class OAuth2Config {
         return new InMemoryClientRegistrationRepository(this.pipedriveClientRegistration());
     }
 
+    /**
+     * Testando
+     * @return
+     */
     private ClientRegistration pipedriveClientRegistration() {
         return ClientRegistration.withRegistrationId("pipedrive")
                 .clientId("1ac90dc9db1424af")
                 .clientSecret("0fdc47b869f38ae0128604c23d9e6363c8bb4fc1")
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-                .redirectUri("http://solarz.nadic.ifrn.edu.br/")
+                .redirectUri("https://sunny-lizard-grain.glitch.me/auth/pipedrive/callback")
                 .authorizationUri("https://oauth.pipedrive.com/oauth/authorize")
                 .tokenUri("https://oauth.pipedrive.com/oauth/token")
                 .clientName("pipedrive")
