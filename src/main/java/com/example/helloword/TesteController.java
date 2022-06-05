@@ -9,6 +9,7 @@ public class TesteController {
 
     @RequestMapping("/teste")
     public String teste(){
+        System.out.println("---- Testando -------");
         return "####Tes";
     }
 

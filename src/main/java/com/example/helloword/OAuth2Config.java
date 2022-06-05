@@ -19,6 +19,7 @@ public class OAuth2Config {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(authorize -> authorize
+                        .antMatchers("/","/teste","/error","/webjars/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2Login(withDefaults())
