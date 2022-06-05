@@ -36,7 +36,7 @@ public class OAuth2Config {
                 .clientId("1ac90dc9db1424af")
                 .clientSecret("0fdc47b869f38ae0128604c23d9e6363c8bb4fc1")
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-                .redirectUri("{baseUrl}/login/oauth2/code/?{registrationId}")
+                .redirectUri("http://suap.ifrn.edu.br")
                 .authorizationUri("https://oauth.pipedrive.com/oauth/authorize")
                 .tokenUri("https://oauth.pipedrive.com/oauth/token")
                 .clientName("teste")
