@@ -1,6 +1,8 @@
 package com.example.helloword;
 
 
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
+import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.ui.Model;
@@ -32,7 +34,13 @@ public class TesteController {
 
     @RequestMapping("/teste")
     public String teste(){
-        System.out.println("---- Testando -------");
+        System.out.println("---- Testando -------: ");
+        return "####Tes";
+    }
+
+    @RequestMapping("/callback")
+    public String callback(@RegisteredOAuth2AuthorizedClient("code") OAuth2AuthorizedClient oauth2AuthorizedClient){
+        System.out.println("# 55555 Testando -------: " + oauth2AuthorizedClient.getPrincipalName());
         return "####Tes";
     }
 
