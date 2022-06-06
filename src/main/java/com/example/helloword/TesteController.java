@@ -14,7 +14,7 @@ public class TesteController {
 
     @RequestMapping("/")
     public Map<String, Object> home(@AuthenticationPrincipal OAuth2User principal) {
-        return Collections.singletonMap("name", principal.getAttribute("display_name"));
+        return Collections.singletonMap("code", principal.getAttribute("code"));
     }
     @RequestMapping("/user")
     public Map<String, Object> user(@AuthenticationPrincipal OAuth2User principal) {
